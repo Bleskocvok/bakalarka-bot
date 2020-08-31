@@ -14,7 +14,7 @@ Send `!mirek <number>` on a server and the bot responds with a **beautiful** gra
 1. Execute these commands from the root folder of the repository:
     ```bash
     $ docker build -t bakalarka .
-    $ docker run bakalarka
+    $ docker run --rm bakalarka
     ```
 
 ## Dependencies
