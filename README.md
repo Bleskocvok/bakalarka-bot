@@ -18,12 +18,13 @@ Send `!mirek <number>` on a server and the bot responds with a **beautiful** gra
     ```
 
 ## Dependencies
-(Automatically installed when run by Docker.)
+(Automatically installed when run using Docker.)
 
-- `Docker`
 - `drag` (https://github.com/bigno78/drag)
 - `DAGmar.jar` (http://www.graphdrawing.org/download/DAGmar.tgz)
-- `svgexport` (https://github.com/shakiba/svgexport)
+- `ImageMagick`
+- `Graphviz`
 - Python requirements:
   - `discord`
   - `python-dotenv`
+

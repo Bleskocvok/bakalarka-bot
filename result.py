@@ -43,8 +43,8 @@ async def graph(ctx, size: int=20):
         # (target 'cycl' doesn't compile)
         # os.system('./cycl -i graphs/')
         os.system('./draw {} out.svg'.format('graphs/' + selected))
-        # uses https://github.com/shakiba/svgexport
-        os.system('svgexport out.svg out.png')
+        # uses https://github.com/shakiba/svgexport !!!!!!!!!!!!!!!!!!
+        os.system('convert out.svg out.png')
         await ctx.send(file=discord.File('out.png'))
 
 

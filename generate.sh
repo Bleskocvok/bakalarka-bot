@@ -3,7 +3,7 @@
 size="$1"
 
 mkdir graphs &> /dev/null
-cd graphs && rm -f * && cd ..
+cd graphs && rm -rf * && cd ..
 
 # uses http://www.graphdrawing.org/data.html
 # downloaded from http://www.graphdrawing.org/download/DAGmar.tgz
