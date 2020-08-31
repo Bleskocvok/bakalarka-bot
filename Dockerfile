@@ -9,7 +9,8 @@ RUN apt-get update && \
     python3 \
     python3-pip \
     wget \
-    npm
+    npm \
+    graphviz
 
 WORKDIR /usr/src/app
 
