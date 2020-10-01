@@ -25,7 +25,7 @@ async def on_ready():
 
 
 @client.command(name='mirek', help='Takes a number and makes the thing')
-async def graph(ctx, size: int=20):
+async def mirek(ctx, size: int=20):
     async with lock:
         if size < 4:
             await ctx.send('```too low```')
@@ -43,9 +43,19 @@ async def graph(ctx, size: int=20):
         # (target 'cycl' doesn't compile)
         # os.system('./cycl -i graphs/')
         os.system('./draw {} out.svg'.format('graphs/' + selected))
-        # uses https://github.com/shakiba/svgexport !!!!!!!!!!!!!!!!!!
+        # uses imagemagik
         os.system('convert out.svg out.png')
         await ctx.send(file=discord.File('out.png'))
+
+
+@client.command(name='graph', help='Graaaph!')
+async def graph(ctx, params : str):
+    with open('tmp.gv', 'w') as f:
+        f.write(params)
+    os.system('./draw {} out.svg'.format('tmp.gv'))
+    # uses imagemagik
+    os.system('convert out.svg out.png')
+    await ctx.send(file=discord.File('out.png'))
 
 
 @client.event
